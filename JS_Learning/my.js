@@ -1,0 +1,1 @@
+alert("how is my first js")

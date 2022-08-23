@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var age = prompt("Please enter your birth year");
+        // alert('Your Age is ' + String(parseInt(new Date().getFullYear()) - (parseInt(age))) + ' Years old')
+        // console.log((new Date().getFullYear())) 
+
+        // var num1 = prompt('first vale');
+        // var num2 = prompt('second value');
+        // alert("the result is " + String(Number(num1) + Number(num2)))
+
+        var age = parseInt(new Date().getFullYear()) - parseInt(prompt("Please enter your birth year"));
+        var name = prompt("Please enter your name")
+        var gender = prompt("Please enter your gender")
+        // if you want to access next line you should use quote to include \n
+        alert('Your name is ' + name + '\n' + 'Your age is ' + age + '\n' + 'you gender is ' + gender)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

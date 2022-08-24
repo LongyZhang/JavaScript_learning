@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = [];
+        var b = [5, 7, 8, 2, 3, 3, 312312, 12, 341, 15];
+
+        for (i = 0; i < b.length - 1; i++) {
+            for (k = 0; k < b.length - 1 - i; k++) {
+                if (b[k] > b[k + 1]) {
+                    var temp = b[k];
+                    b[k] = b[k + 1];
+                    b[k + 1] = temp;
+                }
+            }
+        }
+        console.log(b);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

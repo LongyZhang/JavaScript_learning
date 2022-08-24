@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        var result;
+        for (var i = 0; i < 100; i++) {
+            sum += i;
+        }
+        console.log(sum / 100);
+        var even = 0;
+        var odd = 0;
+
+        for (var i = 0; i < 100; i++) {
+            if (i % 2 == 1) {
+                even += i;
+            }
+            else {
+                odd += i;
+            }
+        }
+        console.log(odd + even);
+
+        var even = 0;
+        for (var i = 0; i < 100; i++) {
+            if (i % 3 == 0) {
+                even += i;
+            }
+        }
+        console.log(even);
+
+        sum = 0;
+        var mark = 0;
+        var total = 0;
+        sum = prompt("total student")
+        for (var i = 0; i < sum; i++) {
+            mark = parseInt(prompt(i));
+            total += mark;
+        }
+        console.log('total score is ' + total);
+        console.log('average is ' + total / sum);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

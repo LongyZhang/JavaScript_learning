@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var row = '';
+        var result = '';
+        for (var i = 0; i < 5; i++) {
+            for (var k = 0; k < 5; k++) {
+                row += '*';
+            }
+            result += '\n';
+
+            result += row;
+            row = '';
+        }
+        console.log(result);
+
+        var row = '';
+        var result = '';
+        for (var i = 0; i < 10; i++) {
+            for (var k = 0; k < 10 - i; k++) {
+                row += '*';
+            }
+            result += '\n';
+
+            result += row;
+            row = '';
+        }
+        console.log(result);
+
+        var RowNum = parseInt(prompt("enter your row"))
+        var ColNum = parseInt(prompt("enter your col"))
+        var row = '';
+        var result = '';
+        for (var i = 0; i < ColNum; i++) {
+            for (var k = 0; k < RowNum; k++) {
+                row += '*';
+            }
+            result += '\n';
+
+            result += row;
+            row = '';
+        }
+        console.log(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Star(name, age, sex, address, sing) {
+            this.Name = name;
+            this.Age = age;
+            this.Sex = sex;
+            this.Address = address;
+            this.Sing = function (sing) {
+                console.log(sing);
+                // return sing
+            }
+            // in constructor object it does not need return
+        }
+        // in constructor function, the first letter must be upper case
+        var zlh = new Star('longy', 32, 'male', 'das', 'my car')
+        var sjia = new Star('JIASHI', 32, 'FEMALE', 'ASDAS', 'subaru')
+        console.log(zlh);
+
+        // var h = {
+        //     name: 'das',
+        //     ha: 312,
+        //     end: 'das'
+        // }
+        // console.log(h);
+
+        for (var key in zlh) {
+            console.log(zlh[key]);
+            // for key in object, 
+            // access value by object[key]
+        }
+
+        for (var key in sjia) {
+            console.log(sjia.Address);
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

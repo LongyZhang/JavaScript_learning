@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var input = parseInt(prompt('Please enter your option\n 1: plus\n 2:minues\n 3:mulitple\n 4:division\n 5:exit\n Please enter'))
+        var num1 = parseInt(prompt('Please enter your first value'))
+        var num2 = parseInt(prompt('please enter your second value'))
+        function Cal(input, num1, num2) {
+            this.Input = input
+            this.Num1 = num1;
+            this.Num2 = num2;
+            this.cal = function () {
+                if (this.Input === 1) {
+                    console.log(this.Num1 + this.Num2);
+                }
+                else if (this.Input === 2) {
+                    console.log(this.Num1 - this.Num2);
+
+                }
+                else if (this.Input === 3) {
+                    console.log(this.Num1 * this.Num2);
+                }
+                else if (this.Input === 4) {
+                    console.log(this.Num1 / this.Num2);
+                }
+            }
+        }
+
+        var zlh = new Cal(input, num1, num2)
+
+        zlh.cal()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

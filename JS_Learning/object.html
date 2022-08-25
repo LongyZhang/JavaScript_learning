@@ -7,7 +7,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        // object must be actual thing
+        // object is constructed by attribute and function
 
+
+        // how tO CREATE OBJCET?
+
+        // way 1 use breaket to create object
+        var a = {
+            name: 'longy',
+            age: 33,
+            sex: 'male',
+            sayhi: function () {
+                console.log('hi my name is ' + a.sex + 'my age is ' + a.age + 'my sex is ' + a.sex);
+            }
+        };
+        // the attribute is seperated by comma
+
+        var b = {
+            name: 'ha',
+            age: 22,
+            sayfuck: function () {
+                console.log('my name is ' + b.name + 'my age is ' + b.age);
+            }
+        }
+
+        b.sayfuck()
+        console.log(a['age']);
+        a['sayhi()']
+
+        // way 2 to create object.
+
+        var c = new Object();
+        c.name = 'c'
+        c.age = 32
+        c.hi = function () {
+            console.log(1);
+        }
+
+        console.log(c);
+
+        // practice create object: 
+
+        var d = {
+            name: 'das',
+            age: 23,
+            sayhi: function () {
+                console.log(d.name);
+            }
+        }
+
+        var e = new Object();
+        e.name = 'e'
+        e.age = 32
+        e.sayhi = function () {
+            console.log(e.name);
+        }
+
+        d.sayhi()
+        e.sayhi()
+
+        var f = new Object(name, age, hi());
+        f.name = 'ha'
+        f.age = 32
+        f.hi = function () {
+            console.log(f.name);
+        }
+
+        f.hi()
     </script>
 </head>
 

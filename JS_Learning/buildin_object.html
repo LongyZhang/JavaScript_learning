@@ -8,13 +8,28 @@
     <title>Document</title>
     <script>
         // in jS there are three type of objects
+        // popular : Math, Date, Array, String  
         // defined variable , internal variable, webbroser object
         var a = [3, 5, 6, 67]
         console.log(Math.max(...a));
+        console.log();
+
+        function cal(a, b) {
+            this.one = a;
+            this.second = b;
+            this.compute = function () {
+                console.log(this.one + this.second);
+            }
+
+        }
+
+        var zlh = new cal(3, 4)
+        zlh.compute()
     </script>
 </head>
 
 <body>
+    <div></div>
 
 </body>
 

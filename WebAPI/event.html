@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <button id="ha">click me</button>
+
+    <script>
+        // event is constructed by three parts. event source,  event type, 
+        //event source,  event type, event processing fucntion
+
+        // 1 (event source who? )
+        var ha = document.getElementById("ha")
+
+        var li = document.querySelector("li")
+
+        // 2 (event type, how to trigger this event?)
+        // ha.onclick trigger this event
+
+        // 3 (event processing function,)
+        // common event  
+        ha.onmouseover = function () {
+            console.log("ha");
+        }
+
+        li.onmouseover = function () {
+            alert("hahahqa")
+        }
+    </script>
+</body>
+
+</html>

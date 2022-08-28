@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li {
+            height: 40px;
+            width: 40px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="tem">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="temp">
+            <li>one</li>
+            <!-- <li>Two</li>
+            <li>three</li>
+            <li>four</li>
+            <li>five</li> -->
+        </ul>
+    </div>
+
+    <script>
+        var ul = document.getElementById("tem")
+        var element = ul.getElementsByTagName('li')
+        // it will stored by array
+        // if there is only one element, it will still return the array
+        // if the document does not have the html element, it returns the empty array
+        console.log(element);
+
+        for (var i = 0; i < element.length; i++) {
+            console.log(element[i]);
+        }
+    </script>
+</body>
+
+</html>

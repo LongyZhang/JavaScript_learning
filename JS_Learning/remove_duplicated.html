@@ -7,12 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var a = [3, 1, 2, 33, 2, 5, 6]
-        var result = a.filter((value, index, self) => value > index)
+        // var a = [3, 1, 2, 1, 2, 5, 3]
+        // var result = a.filter((value, index, self) => value > index)
+        // console.log(result);
+
+        // var m = a.filter((value, index, self) => index % 2 == 0)
+        // console.log(m);
+
+
+        // var arr = [];
+        // for (var i = 0; i < a.length; i++) {
+
+        //     // if indeXof (value = -1) which means the value is not founded 
+        //     if (arr.indexOf(a[i]) === -1) {
+        //         arr.push(a[i])
+        //     }
+        // }
+        // // index of it will only return the first value
+        // console.log(a.indexOf(2, 3));
+        // // second value is starting location for array
+
+        // console.log(a.toString());
+        // // it can transfer the array to string type
+
+        // console.log(a.join('!'));
+        // // it can transfer the array to string and seperate it by any value
+        // // seperate mark
+        // console.log(arr);
+
+        // var str = 'abcd'
+        // var t = true
+        // console.log(t);
+        // result = 0;
+
+        var a = 'abcbddd'
+        var result = 0;
+        var loc = a.indexOf('d')
+        while (loc !== -1) {
+            console.log(loc);
+            result += 1
+            loc = a.indexOf('d', loc + 1)
+        }
+
+        console.log(loc);
         console.log(result);
 
-        var m = a.map((value, index, self) => index)
-        console.log(m);
+        console.log(a.at(1));
+        console.log(a.charCodeAt(1));
+
+        var b = ['a', 'b', 'c', 'a', 'b', 'e']
+
+        var c = b.map((value, index, self) => self.indexOf(value) === index)
+        // charcodeAt will return the ascii number
+        // charAt and at are basically same result
+        // console.log(a.length - result);
+        console.log(c);
+
+        // how did str has length? , the length will transfer the simple data structure to be complicated data structure
     </script>
 </head>
 

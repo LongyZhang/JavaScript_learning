@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+    <div class="box">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul id="nav">
+            <li>four</li>
+        </ul>
+    </div>
+
+    <script>
+        var a = document.getElementsByClassName("box")
+        console.log(a);
+        var b = document.querySelectorAll(".box")
+        // queryselector will select the first element basing on the given result
+        console.log(b);
+
+        var c = document.querySelector("#nav")
+        // it also can select the id or class
+        console.log(c);
+
+        var d = document.querySelector("li")
+        console.log(d);
+
+        var lis = document.querySelectorAll("li")
+        console.log(lis);
+
+        // query selector will select the first element basing on the given element area
+    </script>
+
+</body>
+
+</html>

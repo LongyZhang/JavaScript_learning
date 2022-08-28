@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            width: 300px;
+            /* height: 200px; */
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Display the time</button>
+    <div>sometime</div>
+    <p>123</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRvdOKKuOJZzLsjRA5qOd1ppevHiFTwR24aQ&usqp=CAU" alt="">
+    <script>
+        var a = document.querySelector("button")
+        var d = document.querySelector("div")
+        var p = document.querySelector('p')
+        var i = document.querySelector('img')
+        d.innerText = ' haha '
+        // inner text is only for text
+        // inner html is suggested by w3c , the most popular is inner html
+        a.onclick = function (){
+            i.title='random ppl'
+            i.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YTJ-rsT8inumoyKHJoMlEagP_iIXsQGizw&usqp=CAU'
+        }
+
+        // inner html can be accessed and assigned 
+       
+
+        // inner html also keep space and tab and 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 'abdasdcabdszxa';
+        // a = a.split('')
+        var o = {};
+        console.log(a);
+        for (var i = 0; i < a.length; i++) {
+            var chars = a.charAt(i);
+            if (o[[chars]]) {
+                o[chars]++;
+            }
+            else {
+                o[chars] = 1;
+            }
+        }
+        /*    var b = a.map((value, index, self) => self.indexOf(value) === index ? o[value] = 0 : o[value] = 1)
+           console.log(b); */
+        var max = 0;
+        for (k in a) {
+            console.log(k);
+            o[k] > max ? max = o[k] : max = max
+        }
+        console.log(max);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

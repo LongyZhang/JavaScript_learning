@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 250px;
+            margin: 100px auto;
+        }
+
+        .box li {
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: pink;
+            margin: 15px;
+            background: url(sprite.png) no-repeat;
+            background-position: 0 0;
+
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        var a = document.querySelectorAll("li")
+        console.log(a);
+
+
+
+        for (var i = 0; i < a.length; i++) {
+            var index = i * 44
+            a[i].style.backgroundPosition = '0 -' + index + 'px'
+            // console.log(a.style.backgroundPositionX);
+        }
+    </script>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        li {
+            position: relative;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            /* margin-right: 10px; */
+            list-style: none;
+
+        }
+
+        /* li:hover {
+            background-color: white;
+        } */
+
+
+
+        .drop {
+            position: absolute;
+            /* display: inline-block; */
+            display: none;
+            top: 50px;
+            left: -40px;
+            /* width: 50px;
+            height: 50px; */
+            /* background-color: white; */
+        }
+
+        .drop li {
+            width: 50px;
+            height: 50px;
+        }
+
+        .appear {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>one
+                <ul class="drop">
+                    <li>ha</li>
+                    <li>nu</li>
+                    <li>xz</li>
+                </ul>
+            </li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+    </div>
+    <script>
+        var a = document.querySelector("li")
+        console.log(a);
+        var b = document.querySelector(".drop")
+        a.onmouseover = function () {
+            console.log("on");
+            b.className = "drop appear"
+        }
+        a.onmouseout = function () {
+            console.log("on");
+            b.className = "drop "
+        }
+    </script>
+</body>
+
+</html>

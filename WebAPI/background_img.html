@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .baidu {
+            height: 500px;
+            width: 500px;
+            /* background-color: pink; */
+            margin: 100px auto;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+        }
+
+        li img {
+            width: 100px;
+        }
+
+        body {
+            background: url(1.jpg) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="baidu">
+        <li>
+            <img src="1.jpg" alt="">
+        </li>
+        <li>
+            <img src="2.jpg" alt="">
+        </li>
+        <li>
+            <img src="3.jpg" alt="">
+        </li>
+        <li>
+            <img src="4.jpg" alt="">
+        </li>
+    </ul>
+
+
+    <script>
+        var a = document.body
+        var b = document.querySelector(".baidu").querySelectorAll("img")
+        for (var i = 0; i < b.length; i++) {
+            b[i].onclick = function () {
+                console.log("1");
+                a.style.backgroundImage = 'url(' + this.src + ')'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

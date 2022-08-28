@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">hahaha</div>
+    <script>
+        var a = document.querySelector("div")
+        // issue, if we decide to change the style a lot,
+        // the code is messy and too much
+        // we dont want this thing to happen
+        a.onclick = function () {
+            // this.className = "change"
+            this.className = 'box change'
+        }
+
+        // we can use this.className to apply css changes
+        // it is good for mutiple style changes, it is handy
+        // issue of this approach ,it will replace original class
+
+        // by improve it
+        // we can put the change class and previous class together
+
+    </script>
+</body>
+
+</html>

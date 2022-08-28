@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button>b1</button>
+    <button>b2</button>
+    <button>b3</button>
+    <button>b4</button>
+    <button>b5</button>
+
+    <script>
+        var a = document.getElementsByTagName("button")
+        console.log(a);
+        for (var i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+                for (k of a) {
+                    k.style.backgroundColor = ""
+                }
+                // for k of a, the k is single element of a 
+                // for k in a , the k is index of element a
+                this.style.backgroundColor = 'red'
+                console.log("HA");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab {
+            height: 500px;
+            width: 700px;
+            margin: 100px auto;
+        }
+
+        .tab_list {
+            height: 50px;
+        }
+
+        .tab_list ul {
+            text-align: center;
+        }
+
+        .tab_list ul li {
+            float: left;
+            height: 50px;
+            width: 100px;
+            line-height: 50px;
+            background-color: pink;
+            list-style: none;
+        }
+
+        .tab_content {
+            height: 550px;
+        }
+
+        .tab_content ul {
+            text-align: center;
+        }
+
+        .tab_content ul li {
+            display: none;
+            height: 50px;
+            width: 500px;
+            line-height: 50px;
+            background-color: pink;
+            list-style: none;
+        }
+
+        .tab_list .current {
+            background-color: red;
+        }
+
+        .tab_content .current {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">product</li>
+                <li>specifiction</li>
+                <li>services</li>
+                <li>review</li>
+                <li>community</li>
+            </ul>
+        </div>
+        <div class="tab_content">
+            <ul>
+                <li>one</li>
+                <li class="current">two</li>
+                <li>three</li>
+                <li>four</li>
+                <li>five</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var a = document.querySelector(".tab_list").querySelectorAll("li")
+        var b = document.querySelector(".tab_content").querySelectorAll("li")
+        // for (let i = 0; i < a.length; i++) {
+        //     a[i].onclick = function () {
+
+        //         for (let k = 0; k < a.length; k++) {
+        //             a[k].className = ""
+        //             b[k].className = ""
+        //         }
+        //         this.className = "current";
+        //         b[i].className = "current";
+        //     }
+
+        // }
+        for (var i = 0; i < a.length; i++) {
+
+            a[i].setAttribute("index", i)
+            a[i].onclick = function () {
+
+                var index = (this.getAttribute("index"));
+                for (var k = 0; k < a.length; k++) {
+                    a[k].className = ""
+                    b[k].className = ""
+
+                }
+                this.className = "current";
+
+                b[index].className = "current"
+            }
+
+        }
+        console.log(a);
+    </script>
+
+</body>
+
+</html>

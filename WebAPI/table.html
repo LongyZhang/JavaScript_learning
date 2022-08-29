@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            height: 300px;
+            width: 200px;
+            margin: 100px auto;
+            text-align: center;
+            outline: none;
+            border-collapse: collapse;
+            /* background-color: skyblue; */
+        }
+
+        /* table th {
+            background-color: skyblue;
+        } */
+
+        .change {
+            background-color: skyblue;
+        }
+
+        .normal {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+
+        <tbody>
+            <th>x</th>
+            <th>y</th>
+            <th>z</th>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var a = document.querySelector("tbody").querySelectorAll("tr")
+        // var b = document.getElementById("#two")
+
+        console.log(a);
+        for (var i = 0; i < a.length; i++) {
+            a[i].onmouseover = function () {
+                this.className = "change"
+            }
+            a[i].onmouseout = function () {
+                this.className = "normal"
+            }
+        }
+    </script>
+</body>
+
+</html>

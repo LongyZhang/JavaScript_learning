@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <span class="qrcode"></span>
+    </div>
+
+    <div class="box1">
+        <div class="box2">haha</div>
+    </div>
+
+
+    <script>
+        var a = document.querySelector(".qrcode")
+        // var b = document.querySelector(".qrcode")
+        var b = a.parentNode
+
+        // parent node only points to clost parent
+
+        var c = document.querySelector(".box1")
+        console.log(b);
+
+        console.log(c.childNodes);
+        // this is old way to access data
+        // child nodes can have more childs
+
+
+
+    </script>
+
+</body>
+
+</html>

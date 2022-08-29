@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="box1">
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <script>
+        var a = document.querySelector(".box").querySelector("ul")
+        console.log(a.children);
+
+        var b = document.querySelector(".box1").querySelector("ol").children
+        console.log(b);
+        // a.children can get all element note 
+
+        // text node type is 3
+        // element node type is 1
+
+        console.log(a.childNodes);
+        // childnodes get all child nodes including element nodes and
+    </script>
+</body>
+
+</html>

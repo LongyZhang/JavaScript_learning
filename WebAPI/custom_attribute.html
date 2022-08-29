@@ -10,13 +10,31 @@
 </head>
 
 <body>
-    <div getTime="20"></div>
+    <div data-list-getTime="20" data-list-index="30" data-list-name="longy"></div>
 
     <script>
 
         // the reason we use custom attribute is that we want to get store some temporpary date into html
         var a = document.querySelector("div")
+        // a.getTime may messup with default attribute inside of element
+        // we prefer to use the getAttribute()
         console.log(a.getAttribute("getTime"));
+
+        console.log(a.getAttribute("data-index"));
+
+        // console.log(a.dataset.index);
+
+        // console.log(a.dataset.name);
+
+        console.log(a.dataset.listName);
+
+        // if the custom attribute has more - , we will use Captial letter to seperate the data
+
+        console.log(a.dataset.listIndex);
+        // dateset will collect attribute which starts with data
+        // dataset will automatically find out the attribute which starts with data
+
+        // custom data is better to use data- before custom attribute 
     </script>
 </body>
 

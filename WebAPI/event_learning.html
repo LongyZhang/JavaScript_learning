@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
+
 <body>
-    
+
+    <button>haha</button>
+    <button>abc</button>
+
+    <script>
+        var a = document.querySelectorAll("button")
+        // var b = document.querySelector("button")
+
+        a[0].onclick = function () {
+            alert("haha")
+        }
+
+        a[0].onclick = function () {
+            alert("how are you")
+        }
+
+        // onclick event can only be triggered once,
+        // the later event will replace earlier event
+
+        // in the event listener do not add on
+        a[1].addEventListener('click', function () {
+            alert(22)
+        })
+
+        a[1].addEventListener('click', function () {
+            alert(33)
+        })
+        // event listener is not gonna replace the previous event
+        // event listener is better way
+        // the single element can have mutiple event lisenner or event function
+    </script>
+
+    <!-- traditional event starts with on 
+     -->
+
 </body>
+
 </html>

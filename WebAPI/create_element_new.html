@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>ha</div>
+    <p>1</p>
+    <input type="submit">
+    <script>
+        // document.write("<div>123</div>")
+        var a = document.querySelector("div")
+        a.onclick = function () {
+            document.write("<div>123</div>")
+        }
+
+        // document .write has issue to lost element
+        // it is not suggested to use
+
+        for (var i = 0; i < 1000; i++) {n
+            var temp = []
+            temp.push("<div>123</div>")
+
+            // a.innerHTML += "<div>123</div>"
+            // var b = document.createElement("div")
+            // b.style.height = "10px";
+            // b.style.width = "10px";
+            // b.style.backgroundColor = "red"
+            // document.body.appendChild(b)
+        }
+        a.innerHTML = temp.join("")
+
+
+
+        // innerHTML does not have this issue
+        // but innerHTML is slow af
+
+        // create element would be faster
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            margin: 100px auto;
+        }
+
+
+        .box2 {
+            height: 200px;
+            width: 300px;
+            margin: 0 auto;
+
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" placeholder="clickme">
+        <input type="submit" value="delete" id="del">
+        <select name="" id="del_value"></select>
+    </div>
+    <div class="box2"></div>
+
+
+    <script>
+        var a = document.querySelector("textarea")
+
+        var b = document.querySelector("input")
+
+        var c = document.querySelector(".box2")
+
+        var e = document.querySelector("#del")
+
+        var f = document.querySelector("#del_value")
+
+        b.onclick = function () {
+
+            for (i of f.children) {
+                if (i.selected) {
+                    i.removeAttribute("selected")
+                }
+            }
+
+            if (a.value == "") {
+                alert("please insert")
+            }
+            else {
+                console.log(a.value);
+                var d = document.createElement("div")
+                d.innerHTML = a.value
+                d.setAttribute("current", true)
+                c.insertBefore(d, c.children[0])
+
+                var g = document.createElement("option")
+                g.value = a.value
+                g.innerHTML = a.value
+                g.setAttribute("selected", "selected")
+
+                f.appendChild(g)
+            }
+            a.value = ""
+        }
+
+        e.onclick = function () {
+            if (f.children.length == 0) {
+                alert("There is no value to insert")
+            }
+            else {
+                // for (i of f.children) {
+                //     if (i.selected) {
+                //         f.removeChild(i)
+                //         c.removeChild(i)
+                //     }
+                // }
+
+
+                for (var i = 0; i < f.children.length; i++) {
+                    if (f.children[i].selected) {
+                        f.removeChild(f.children[i])
+                        c.removeChild(c.children[c.children.length - 1 - i])
+                    }
+                }
+                // var t = f.children[0]
+                // f.removeChild(t)
+                // c.removeChild(c.children[0])
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

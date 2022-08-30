@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <script>
+        var a = document.querySelector(".box1")
+        var b = document.createElement("div")
+        b.innerHTML = "ahha"
+        a.appendChild(b)
+
+        var c = a.children[0].cloneNode(true)
+        // if the cloneNode bracket is empty ,it will only clone the element without value
+        // if the cloneNode bracket is true, it will clone element and value
+
+
+        a.appendChild(c)
+
+
+    </script>
+</body>
+
+</html>

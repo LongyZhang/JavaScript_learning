@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <a href="">h</a>
+    <div class="box">das</div>
+    <p>a</p>
+
+    <script>
+        var div = document.querySelector(".box")
+        console.log(div.nextElementSibling);
+        var b = div.previousElementSibling
+        console.log(b);
+        // next elemenet sibling can get the next sibling nodes
+        // but it can not get last element nodes
+
+        console.log(div.previousElementSibling);
+        // but we can use previous element sibling to get last element
+    </script>
+</body>
+
+</html>

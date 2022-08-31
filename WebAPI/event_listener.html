@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        var a = document.querySelectorAll("div")
+        a[0].onclick = function () {
+            alert("1")
+            a[0].onclick = null;
+            // if we set it to be null, it can be triggerred once
+            // traditional way to unblind event
+        }
+
+        a[1].addEventListener("click", fn) // the addevenet listener does not need to add fn()
+
+        function fn() {
+            alert("22")
+            a[1].removeEventListener("click", fn)
+        }
+
+        a[2].addEventListener("mouseover", fn1)
+        function fn1() {
+            alert("33")
+            a[2].removeEventListener("mouseover", fn1)
+        }
+        // the new way to blind element
+
+        // by default the onclick is running forever 
+    </script>
+
+</body>
+
+</html>

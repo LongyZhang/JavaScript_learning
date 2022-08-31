@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+
+            width: 50px;
+            height: 50px;
+
+            /* background-position-x: ; */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="wrong.png" alt="">
+
+    <script>
+        var a = document
+        var b = document.querySelector("img")
+        a.addEventListener("mousemove", function (event) {
+            b.style.left = event.pageX - 14 + "px"
+            b.style.top = event.pageY - 14 + "px"
+            console.log(event.pageX, event.pageY);
+        })
+        b.addEventListener("dragstart", function (event) {
+            event.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

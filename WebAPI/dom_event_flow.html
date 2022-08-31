@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- dom event flow is like 
+    you drop a stone into water, from top to bottom,
+ it will catch this event
+when bubble goes up, it is bubble peroid -->
+    <style>
+        .son {
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+        }
+
+        .father {
+            height: 500px;
+            width: 500px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        // // if it catch period , it will catch from father to son 
+        // var son = document.querySelector(".son")
+        // // if the add event listener third parameter is true
+        // // it is catch period
+        // son.addEventListener("click", function () { alert("son") }, true);
+
+        // var father = document.querySelector(".father")
+        // // if the add event listener third parameter is true
+        // // it is catch period
+        // father.addEventListener("click", function () { alert("father") }, true);
+
+        // if it is bubble period , it will comes out from son to father
+        var son = document.querySelector(".son")
+        // if the add event listener third parameter is false
+        // it is catch period
+        son.addEventListener("click", function () { alert("son") }, false);
+
+        var father = document.querySelector(".father")
+        // if the add event listener third parameter is true
+        // it is catch period
+        father.addEventListener("click", function () { alert("father") }, false);
+    </script>
+
+</body>
+
+</html>

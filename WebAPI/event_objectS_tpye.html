@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>ha</div>
+    <a href="" id="ha">ha</a>
+
+    <script>
+        var a = document.querySelector("div")
+        a.addEventListener("click", fn)
+        a.addEventListener("mouseover", fn)
+        a.addEventListener("mouseout", fn)
+        a.addEventListener("click", fn)
+
+
+        function fn(event) {
+            console.log(event.type);
+        }
+        // stop default event such as changing page 
+
+        var b = document.querySelector("#ha")
+
+        b.addEventListener("click", function (event) {
+            event.preventDefault()
+            // DOM standard approach
+        })
+        // this is suggested by DOM to prevent changing page
+    </script>
+
+</body>
+
+</html>

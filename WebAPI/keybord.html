@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text">
+
+    <script>
+        var a = document.querySelector("input")
+
+        // keyup will trigger when you finish the key
+        // keydown will trigger when you press the key, the key value will be used
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key == "s") {
+                a.focus()
+                event.preventDefault()
+                /* it will prevent the default input for key */
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">1</div>
+    <ul>
+        <li>abc</li>
+        <li>asd</li>
+        <li>zcx</li>
+        <li>asd</li>
+        <li>eqw</li>
+    </ul>
+
+    <script>
+        var a = document.querySelector(".box")
+        a.addEventListener("click", function (event) {
+            console.log(event.currentTarget);
+            console.log(this);
+        })
+
+        // this will return the current target.
+        // event.target will return the target
+        // but they are different
+
+        var ul = document.querySelector("ul")
+        ul.addEventListener("click", function (event) {
+            console.log(event.target);
+            // if it is triggered by li ,the target will be li 
+            // if you clicked the ul , the target will be ul 
+            // it will return who trigger the event
+            console.log(this);
+            // this will always points to regiested element
+            // this always points to UL 
+        })
+    </script>
+
+</body>
+
+</html>

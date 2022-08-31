@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>qweasd</div>
+    <div class="box">das</div>
+
+    <script>
+        var a = document.querySelector("div")
+        // a.addEventListener("contextmenu", function (event) {
+        //     event.preventDefault()
+        // })
+
+        a.addEventListener("selectstart", function (event) {
+            event.preventDefault()
+        })
+
+        var b = document.querySelector(".box")
+        b.addEventListener("mouseover", function (event) {
+            console.log(event);
+        })
+        // contextmenue will disable the right mouse click
+    </script>
+</body>
+
+</html>

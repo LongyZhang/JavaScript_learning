@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box2 {
+            position: relative;
+            height: 500px;
+            width: 500px;
+            margin: 100px auto;
+        }
+
+        .box {
+            position: absolute;
+            top: -35px;
+            left: 1px;
+            width: 100px;
+            height: 25px;
+            border-radius: 10px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box2">
+        <div class="box"></div>
+        <input type="text" placeholder="Please input your data">
+    </div>
+
+    <script>
+        var a = document.querySelector("input")
+        document.addEventListener("keyup", function (event) {
+            if (event.key == "s") {
+                a.focus()
+            }
+        })
+
+        var b = document.querySelector(".box")
+        var temp = ""
+        a.addEventListener("keydown", function (event) {
+            console.log(event.keyCode);
+            if (event.keyCode > 33 && event.keyCode < 126) {
+                console.log(event.keyCode);
+                temp += event.key
+                b.innerHTML = this.value
+                b.style.left = temp.length * 2 + "px"
+                // b.style.width = temp.length + "px"
+            }
+            if (event.keyCode == 8) {
+                temp = temp.slice(0, -1);
+                b.innerHTML = temp
+            }
+
+        })
+
+        // b.innerHTML = temp
+    </script>
+
+</body>
+
+</html>

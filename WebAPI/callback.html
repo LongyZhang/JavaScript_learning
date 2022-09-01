@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>ad</div>
+    <input type="submit">
+
+    <script>
+        // var b = setTimeout(callback, 5000)
+        // all the add eventlistener are callback function
+
+        var a = document.querySelector("div")
+        var b = setTimeout(function () {
+            a.style.display = "none"
+        }, 5000)
+
+        a.addEventListener("click", function () {
+            clearTimeout(b)
+        })
+
+        var c = document.querySelector("input")
+        var d = setInterval(function () {
+            console.log(1);
+        }, 3000)
+
+        c.addEventListener("click", function () {
+            clearInterval(d)
+        })
+
+        // callback function will be triggerred when the time is up
+        // normal js function will be implemented from top to button
+
+    </script>
+
+</body>
+
+</html>

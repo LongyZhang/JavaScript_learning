@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button>Submit</button>
+    <span>60</span>
+    <script>
+        var a = document.querySelector("input")
+        var b = document.querySelector("button")
+        var c = document.querySelector("span")
+        b.addEventListener("click", function () {
+            b.setAttribute("disabled", "true")
+            c.style.display = "inline"
+
+            var e = setInterval(function () {
+                c.innerText--;
+                if (c.innerText == 0) {
+                    c.innerText = 60
+                    c.style.display = "none"
+                    clearInterval(e)
+                }
+            }, 1000)
+            var f = setInterval(function () {
+                console.log();
+                b.removeAttribute("disabled")
+                clearInterval(f)
+            }, 60000)
+        })
+    </script>
+
+</body>
+
+</html>
